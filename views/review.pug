@@ -1,0 +1,25 @@
+head
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='../public/CSS/main.css')
+    link(rel='stylesheet' href='../public/CSS/gridCSS.css')
+    script(src='../public/js/java_script.js')
+    title review page
+header#header
+body(onload="loadPage()" dir ="rtl")
+    nav#nav
+    .comments
+        h1  חוות דעת
+        input#myInput(type='text' onkeyup='myFunction()' placeholder='חפש לפי שיעור')
+        table#myTable(dir='rtl')
+            tr.header
+                th(style='width:20%;') שיעור
+                th(style='width:20%;') שם משתמש
+                th(style='width:40%;') חוות דעת
+                th(style='width:20%;') תאריך
+            each item, i in reviews
+                tr 
+                    td= item.className 
+                    td=item.userName 
+                    td= item.review
+                    td= item.date
+#footer(dir='ltr')
