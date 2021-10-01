@@ -1,0 +1,109 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/CSS/main.css">
+    <link rel="stylesheet" href="../public/CSS/gridCSS.css">
+    <script src= "../public/js/java_script.js"></script>
+    <title>price page</title>
+</head>
+<body onload="loadPage()" dir ="rtl">
+    <header id="header"></header>
+    <div class="btn-group">
+        <ul class="price">
+        <h1>מחירון </h1> 
+        <h3 style="display: inline-block;"> בחר סוג לקוח:</h3>          
+        <input  type = "button" class="student" name = "student" id="student" value = "סטודנט  חבר אגודה" onclick="myFunctionPrice(student)">           
+        <input type = "button" class="guest" name = "guest" id="guest" value = "אורח" onclick="myFunctionPrice(guest)">           
+        <input type = "button" class="employee" name = "employee" id="employee" value = " עובד אוניברסיטה/ בוגר" onclick="myFunctionPrice(employee)">
+    </div>
+        
+    <div class="price-courses" > 
+        <table id="journal" class="journal" dir="rtl">
+        <tr>
+        <th><h3> מנוי\כרטיסיה </h3></th>
+        <th class="price"><h3> סוג שיעור </h3></th>
+        <th><h3> מחיר </h3></th>
+        </tr>
+        <tr class="student" course-id="">
+            <td><input type="radio" name ="price-check" value="s2"> כניסה חד פעמית </td>
+            <td>רגיל - קיקבוקס, סוויצ'ינג, זומבה ועיצוב</td>
+            <td class="price" style="direction: rtl; text-align: center;">20.00 <i class="fa fa-ils small"></i></td> 
+        </tr>
+
+        <tr class="student" course-id="">
+            <td><input type="radio" name ="price-check" value="s4"> כניסה חד פעמית </td>
+            <td>מורחב - ספינינג, מדרגה, פונקציונלי, HIIT</td>
+            <td class="price" style="direction: rtl; text-align: center;">25.00 <i class="fa fa-ils small"></i></td>
+        </tr>
+
+        <tr class="student" course-id="">
+            <td><input type="radio" name ="price-check" value="s1"> כניסה חד פעמית </td>
+            <td>אקסטרה - רצועות, יוגה, פילאטיס וריקוד לסוגיו</td>
+            <td class="price" style="direction: rtl; text-align: center;">30.00 <i class="fa fa-ils small"></i></td>    
+        </tr>
+
+        <tr class="student" course-id="">
+            <td><input type="radio" name ="price-check" value="s3"> כרטיסיה 10 כניסות </td>
+            <td>רצועות, יוגה, פילאטיס וריקוד לסוגיו</td>
+            <td class="price" style="direction: rtl; text-align: center;">190.00 <i class="fa fa-ils small"></i></td>    
+        </tr>
+
+        <tr class="guest" course-id="">
+            <td><input type="radio" name ="price-check" value="s1"> כניסה חד פעמית </td>
+            <td>אקסטרה - רצועות, יוגה, פילאטיס וריקוד לסוגיו</td>
+            <td class="price" style="direction: rtl; text-align: center;">30.00 <i class="fa fa-ils small"></i></td>    
+        </tr>
+
+        <tr class="guest" course-id="">
+            <td><input type="radio" name ="price-check" value="s2"> כניסה חד פעמית </td>
+            <td>רגיל - קיקבוקס, סוויצ'ינג, זומבה ועיצוב</td>
+            <td class="price" style="direction: rtl; text-align: center;">32.00 <i class="fa fa-ils small"></i></td> 
+        </tr>
+
+        <tr class="guest" course-id="">
+            <td><input type="radio" name ="price-check" value="s4"> כניסה חד פעמית </td>
+            <td>מורחב - ספינינג, מדרגה, פונקציונלי, HIIT</td>
+            <td class="price" style="direction: rtl; text-align: center;">40.00 <i class="fa fa-ils small"></i></td>
+        </tr>
+        
+        <tr class="guest" course-id="">
+            <td><input type="radio" name ="price-check" value="s3"> כרטיסיה 10 כניסות </td>
+            <td>רצועות, יוגה, פילאטיס וריקוד לסוגיו</td>
+            <td class="price" style="direction: rtl; text-align: center;">340.00 <i class="fa fa-ils small"></i></td>    
+        </tr>
+
+        <tr class="employee" course-id="">
+            <td><input type="radio" name ="price-check" value="s2"> כניסה חד פעמית </td>
+            <td>רגיל - קיקבוקס, סוויצ'ינג, זומבה ועיצוב</td>
+            <td class="price" style="direction: rtl; text-align: center;">23.00 <i class="fa fa-ils small"></i></td> 
+        </tr>
+
+        <tr class="employee" course-id="">
+            <td><input type="radio" name ="price-check" value="s4"> כניסה חד פעמית </td>
+            <td>מורחב - ספינינג, מדרגה, פונקציונלי, HIIT</td>
+            <td class="price" style="direction: rtl; text-align: center;">28.00 <i class="fa fa-ils small"></i></td>
+        </tr>
+
+        <tr class="employee" course-id="">
+            <td><input type="radio" name ="price-check" value="s3"> כרטיסיה 10 כניסות </td>
+            <td>רצועות, יוגה, פילאטיס וריקוד לסוגיו</td>
+            <td class="price" style="direction: rtl; text-align: center;">300.00 <i class="fa fa-ils small"></i></td>    
+        </tr>
+
+        <tr class="employee" course-id="">
+            <td><input type="radio" name ="price-check" value="s1"> כניסה חד פעמית </td>
+            <td>אקסטרה - רצועות, יוגה, פילאטיס וריקוד לסוגיו</td>
+            <td class="price" style="direction: rtl; text-align: center;">35.00 <i class="fa fa-ils small"></i></td>    
+        </tr></table>
+
+    </div><br>
+      
+    <button onclick="checkIfChosen()" class="payment_btn" > מעבר לתשלום </button>
+
+    <div class="price-footer" id="footer" dir="ltr"></div>
+
+
+   
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+
+    
+    .home-grid-container{
+        display: grid;
+        grid-template-areas:'mes' 'reg' 'plus' 'sch' ;
+        margin: 0px;
+        align-items: center;
+      }
+      
+      .home-message-box{
+        grid-area: mes ;
+      
+      }.home-studio-reg{
+          grid-area: reg;
+      }
+      
+      .home-studio-plus{
+        grid-area: plus;
+      }
+      
+      .home-schedule-container{
+        grid-area: sch;
+      }
+
+/* ----------------------------------------------- */
+
+/* class grid */
+.class-grid-container{
+    display: grid;
+    grid-template-areas: 'head pic' 'tex tex' 'info info' 'reg  reg';
+    width: 100%;
+
+}
+
+.class-head{
+    grid-area: head;
+}
+.class-pic{
+    grid-area: pic;
+}
+.class-text{
+    grid-area: tex;
+}
+.class-info{
+    grid-area: info;
+}
+.class-reg{
+    grid-area: reg;
+
+}
+#class_info{
+    display:none;
+}
+
+
+/* -------- review page ------------ */
+
+#myInput {
+    float:right;
+    width: 20%;
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 50px; /* Add some space below the input */
+  }
+  
+  #myTable {
+    text-align: center;
+    float:right;
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+  }
+  
+  #myTable th, #myTable td {
+    text-align: right; /* Left-align text */
+    padding: 12px; /* Add padding */
+  }
+  
+  #myTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #myTable tr.header, #myTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+  }
+
+
+  /* -------------------------------- about us grid ----- */
+.about-grid-container{
+    display: grid;
+    grid-template-areas: 'header_2 header_2' 'info_2 info_2' 'info_3 map';
+    width: 100%;
+    background-color: transparent;
+  }
+  
+  
+  .about-header{
+    grid-area: header_2;
+  }
+  .about-info{
+    grid-area: info_2;
+  }
+  .about-info-2{
+    grid-area: info_3;
+  }
+  .about-map{
+    grid-area: map;
+    border: 10px solid transparent;
+  }
+
+  
+ /* --------- contact us grid ---------------- */
+ .contact-grid-container{
+    display: grid;
+    grid-template-areas: 'head head' 'right left''right left';
+    width: 100%;
+    background-color: transparent;
+
+}
+.contact-head{
+grid-area: head;
+}
+.contact-form{
+grid-area: right;
+width: 100%;
+font-family: "text";
+}
+.contact-info{
+ grid-area:left;
+}
+
+
+
+/* -------------------------------- user grid ----- */
+
+.user-grid-container{
+  display: grid;
+  width: 100%;
+  grid-template-areas:'head head head' 'pic det bmi' 'pic det bmi' 'wallet wallet wallet' 'class class class' 'fav fav fav';
+}
+
+.bmi-info{
+  display: flex;
+  justify-content: space-evenly;
+}
+.user-head{
+  grid-area: head;
+}
+
+.user-pic{
+grid-area: pic;
+width: 100%;
+}
+.user-det{
+grid-area: det;
+}
+.user-bmi{
+grid-area: bmi;
+
+}
+.user-wallet{
+  grid-area: wallet;
+
+}
+.user-myClass{
+  grid-area: class;
+
+}
+.user-favorite{
+  grid-area: fav;
+
+} 
+
+/* ---------------- price page -------------- */
+.payment_btn{
+  font-family:"text" ;
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
+  background-color: rgb(250, 250, 96);
+  border-radius: 6px;
+  padding : 4px;
+
+}
+
+
+
+/* ------------ registration -------------- */
+
+
+/* ------------ login form ---------------- */
+

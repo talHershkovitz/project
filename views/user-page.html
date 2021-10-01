@@ -1,0 +1,199 @@
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../public/CSS/main.css">
+        <link rel="stylesheet" href="../public/CSS/gridCSS.css">
+        <script src= "../public/js/java_script.js"></script>
+        <title>contact page</title>
+    </head>
+    <body onload="LoadTable()" dir ="rtl">
+        <header id="header"></header>
+        <nav id ="nav"></nav>
+
+        <div class="user-grid-container">
+            
+            <div class="user-head">
+                <h1> אזור אישי</h1>
+            </div>
+            <div class="user-pic">
+               
+                 <img src="../public/img/facebook_icon.png" width="100vh">
+            </div>
+            <div class ="user-det">
+                <h3><strong>
+                    פרטים אישיים:
+                </strong></h3>
+                    <strong>
+                        שם: </strong> <span id="user_name">  לירז אוחנה</span> <br>
+                    <strong>
+                       אימייל: </strong> <span id="user_email"> lirazohana@gmail</span> <br>
+                    <strong>
+                        תאריך לידה: </strong> <span id="user_bd"> 12/08/1996 </span> <br>
+                    <strong>
+                        סוג משתמש: </strong> <span id="user_type"> סטודנט </span> <br>
+                   
+                    <button id=updateBtn> 
+                        עדכון פרטים
+                    </button>
+            </div> 
+            <div class="user-bmi">
+                <img src="../public/img/bmi.jpg" alt=" התמונה לא נמצאה" style=" border: 3px solid rgb(21, 22, 44)" > <br><br><br>
+                <div class="bmi-info">
+                    <div>
+                <strong>
+                     </strong> <span id="user_bmi"> </span> :BMI <br>
+                <strong>
+                   סהכ קלוריות שנשרפו: </strong> <span id="user_calory"> 100 </span> <br>
+                <button id="restartCalo" onclick="restartCalory()"> 
+                    איפוס קלוריות
+                </button> <br><br>
+                <button id = calculator>מחשבון BMI</button>
+             
+            </div>
+            <div>
+                <strong>
+                    גובה: </strong> <span id="user_height"> 1.70 </span> <br>
+                <strong>
+                    משקל: </strong> <span id="user_kg"> 60 </span> <br>
+               
+            </div>
+            </div>
+    
+            </div>     
+           
+            <div class="user-wallet">
+                <h3><strong>
+                    הארנק שלי:
+                </strong></h3>
+                
+<table>
+    <tr>
+      מנוי שנתי סטודיו פוזיטיב- עד לתאריך 01-01-2022
+    </tr> <br>
+    <tr>
+      5 כניסות לסטודיו פלוס
+    </tr>
+  </table>
+                <button>
+                    <a href="./price-page.html"> רכישה </a>
+                </button>
+    
+            </div>
+            <div class="user-myClass">
+                <br><br>
+                <h3><strong>
+                השיעורים שלי:
+                </strong></h3>
+               
+<table>
+    <tr>
+      <th>שם השיעור</th>
+      <th>שם המדריך</th>
+      <th>תאריך</th>
+      <th> </th>
+    </tr>
+    <tr>
+      <td>פילאטיס</td>
+      <td>לירז אוחנה</td>
+      <td>05-09-2021 16:00</td>
+      <td><a href="">בטל השתתפות</a></td>
+
+    </tr>
+    <tr>
+        <td>יוגה</td>
+        <td>מתן אדרי</td>
+        <td>02-09-2021 17:30</td>
+        <td><a href="">השאר חוות דעת</a></td>
+  
+      </tr>
+    <tr>
+      <td>פילאטיס</td>
+      <td>לירז אוחנה</td>
+      <td>01-09-2021 16:00</td>
+      <td><a href="">השאר חוות דעת</a></td>
+
+    </tr>
+    <tr>
+      <td>קיקבוקס</td>
+      <td>אביחי באינה</td>
+      <td>20-08-2021 10:30</td>
+      <td><a href="">השאר חוות דעת</a></td>
+
+  </tr>
+  </table>
+    
+            </div>
+            <div class="user-favorite">
+                <br><br>
+                <h3><strong>
+                    המועדפים שלי:
+                </strong></h3>
+                <ul>
+                    <li>פילאטיס..................<a href="">הסר</a></li>
+                    <li>יוגה...........................<a href="">הסר</a></li>
+                    <li>קיקבוקס..................<a href="">הסר</a></li>
+                </ul>
+                <input type="checkBox">
+                    אני מעוניין לקבל עדכונים למייל
+                </inputn>
+              
+            </div>
+
+        </div>
+    <div id="footer" dir="ltr"></div>      
+
+     <div class="details-popup" id="set">
+            <div class="overlay-details" id="overlay-details">  </div>
+
+            <div class="content-details" id=content-details> 
+                <h3>אנא הכנס פרטים חדשים:</h3>
+                <form method="GET" name="regi-form" onsubmit="validate_regi_Form()" action="">
+                <label for= "first-name">שם פרטי:</label>
+                <input id="first-name" type="text" required>  <br>
+                <label for="last-name">שם משפחה:</label> 
+                <input id="last-name" type="text" required>  <br>
+                <label for="email">כתובת אימייל:</label> 
+                <input id="email" type="email" required>  <br>
+                <label for="birthdate"></label>תאריך לידה:</label> 
+                <input id="birthdate" type="date" >  <br>
+                <label for="height">גובה:</label> 
+                <input id="height" type="number" required>  <br>
+                <label for="weight">משקל:</label>  
+                <input id="weight" type="number" required> <br>
+
+                <div class="user_pop_btn">
+                    <button id="setDetails"> עדכן פרטי משתמש</button>
+                    <button id="return"> ביטול</button>
+                </div>
+           </form>
+                
+         </div>
+    </div>
+
+    <div class="details-popup" id="bmi-popup">
+        <div class="overlay-details" id="overlay-details">  </div>
+
+     <div class="content-details" id="bmi-content"> 
+        <h3>מחשבון BMI</h3>
+  
+        <!-- Option for providing height 
+            and weight to the user-->
+        <p>גובה (ס"מ)</p>
+  
+        <input type="text" id="height">
+  
+        <p>משקל (ק"ג)</p>
+  
+        <input type="text" id="weight"> <br> <br>
+  
+        <button id="btn_bmi">חשב BMI</button>
+        <button id="btn_exit" onclick=" BmiPopup()";>יציאה</button>
+  
+        <div id="result"></div>
+       </div>
+   </div>
+      
+    
+</body>
+</html>

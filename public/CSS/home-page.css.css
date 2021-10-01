@@ -1,0 +1,306 @@
+/* ------- home slides -------- */
+
+.home-slidershow{
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  .bar{
+    width: 50px;
+    height: 13px;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .bar:hover{
+    background: #fff;
+  }
+  
+  input[name="r"]{
+      position: absolute;
+      visibility: hidden;
+  }
+  
+  .home-slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 0.6s;
+  }
+  .slide img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  #r1:checked ~ .s1{
+    margin-left: 0;
+  }
+  #r2:checked ~ .s1{
+    margin-left: -20%;
+  }
+  #r3:checked ~ .s1{
+    margin-left: -40%;
+  }
+  #r4:checked ~ .s1{
+    margin-left: -60%;
+  }
+  #r5:checked ~ .s1{
+    margin-left: -80%;
+  }
+
+  /* ---------- HOME STUDIO LESSONS CONTAINER ---- */
+  
+.studio-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    }
+    
+    #studio-reg {
+      background-color: black;
+    }
+    #studio-plus{
+      background-color: black;
+    }
+    
+    .card{
+    grid-area: auto;
+    position:relative;
+    display: grid;
+    margin: 5px;
+    width: 280px;
+    height:260px;
+    transition: 0.5s;
+    box-shadow: 30px 7px 10px rgba(0,0,0,0.5);
+    border-radius: 4px;
+    overflow: hidden;
+    
+    }
+     .card:hover {
+      transform: scale(1.4);
+      transform: translateY(30px);
+      z-index: 2;
+      transition: 0.3s;
+      filter: brightness(1.1);
+     
+     }
+    
+    
+     
+    
+    .studio-container .card .imgBx,
+    .studio-container .card .contentBx {
+      position:  absolute;
+      top:0;
+      left: 0;
+      width:100%;
+      height:100%;
+      
+    }
+    #yoga {         background: linear-gradient(180deg,#036eb7,#64eaff);}
+    #pilates {      background: linear-gradient(180deg,#ad039f,#f1d3ea);;}
+    #dance {        background: linear-gradient(180deg,#ca0d0d,#ebcfcf);;}
+    #trx {          background: linear-gradient(180deg,#c29608,#ebcfcf);}
+    #functional {   background: linear-gradient(180deg,#4008c2,#ebcfcf); }
+    #kickbox {      background: linear-gradient(180deg,#a75b05,#ebcfcf);}
+    #spinning {     background: linear-gradient(180deg,#0c961f,#ebcfcf);}
+    #hiit {         background: linear-gradient(180deg,#924040,#ebcfcf);}
+    
+    #hiit,#spinning, #kickbox,#functional,#trx ,#dance,#pilates,#yoga {
+      opacity: 0.6;
+    }
+    
+    .studio-container .card .imgBx img  {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+      
+    }
+    
+    .studio-container .card .contentBx .content {
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      padding: 30px;
+      transition: 0.1s;
+      transform: translateX(-300px);
+    }   
+    
+    .studio-container .card:hover .contentBx .content {
+      transform : translateX(0px);
+      position: relative;
+      background: linear-gradient(#000000, #6f7174);
+      
+     
+    }
+    
+    .studio-container .card .contentBx .name {
+    margin: 25px;
+    color: white;
+    opacity :1;
+    
+    }
+
+    /* ------------ home table ---- */
+    
+
+.home-schedule-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .week-days-container{
+    display: flex;
+  }
+  .week-day{
+    width: 160px;
+    border: solid 1px white;
+    color: #9bafd9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    
+  }
+  .part__day{
+    display: flex;
+  }
+  .morning, .afternoon, .evening,.corner{
+    width: 90px;
+    height: 320px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+  }
+  
+  .corner {
+  height: 120px;
+  }
+  .morning {
+    background-color:darkorange
+  }
+  .afternoon{
+    background-color: orangered;
+  }
+  .evening {
+    background-color: royalblue;
+  }
+  
+  .lesson{
+    background-color: white;
+    position:relative;
+    height: 320px;
+    width: 160px;
+    margin: 2px;
+    justify-content:center;
+    align-items:flex-end;
+    font-size: 2rem;
+    object-fit:cover;
+    
+  }
+  
+  .btn_cls  {
+  width: 160px;
+  margin-bottom: 1px;
+  border-radius: 1px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: red;
+  
+  }
+  
+  .btn_cls:hover {
+  opacity: 0.7;
+  }
+  
+  
+  #href1 {
+    background:#0c961f;
+  }
+  
+  
+  #btn_pil {
+  background-color: rgb(226, 57, 218);
+  }
+  #btn_yoga{
+  background-color: rgb(94, 116, 241);
+  }
+  #btn_hituv{
+  background-color: rgb(224, 111, 58);
+  }
+  
+  
+  
+  .popup .overlay {
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height: 100vh;
+    background: #515152;
+    opacity: 0.6;
+    z-index: 1;
+    display: none;
+  }
+  
+  .popup .popcontent {
+    position: fixed;
+    width: 400px;
+    height: 220px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    background-color: white;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+  }
+  .popup .close_btn {
+    position:absolute;
+    background-color: #515152;
+    border-radius: 50%;
+  }
+  .popup.active .overlay {
+    display: block;
+  }
+  .popup.active .popcontent {
+    display: block;
+    transform:translate(-50%,-50%) scale(1);
+  }
+
+  
+.week2 ,.week3{
+    display: none;
+  }
+    .week1 {
+    display: block;
+   }
+    

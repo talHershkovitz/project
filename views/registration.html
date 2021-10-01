@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration page</title>
+    <link rel="stylesheet" href="../public/CSS/main.css">
+    <link rel="stylesheet" href="../public/CSS/gridCSS.css">
+    <script src= "../public/js/java_script.js"></script>
+    <script src= "../app.js"></script>
+
+
+</head>
+<body dir="rtl" onload="loadPage()">
+    <header id="header"></header>
+    <nav id="nav"></nav>
+    <div class= "regi-page">
+        
+        <div class="regi-form">
+            <h2> יצירת משתמש חדש </h2><br>
+            <h3>נא הכנס את הפרטים הבאים:</h3>
+            <form action="http://localhost:8080/newUser" method="POST" name="regi-form" onsubmit="validate_regi_Form()" >
+            <label for= "first_name">שם פרטי:</label> <br>
+            <input id="first_name" type="text" name="first_name" required> <br>
+            <label for="last_name">שם משפחה:</label> <br>
+            <input id="last_name" type="text" name="last_name" required> <br>
+            <label for="email">כתובת אימייל:</label> <br>
+            <input id="email" type="email" name="email" required> <br>
+            <label for="password">סיסמא:</label> <br>
+            <input id="password" type="passwors" name="password" required> <br>
+            <label for="birthdate"></label>תאריך לידה:</label> <br>
+            <input id="birthdate" type="date" name="birthdate"> <br><br>
+
+            <label>אנא בחר סוג מנוי:</label> <br>
+            <input type="radio" id="radio-student" name="user-type" value="1" checked >
+            <label for="radio-student">סטודנט</label>
+            <input type="radio" id="radio-emp" name="user-type" value="2" >
+            <label for="radio-emp">עובד אוניברסיטה</label>
+            <input type="radio" id="radio-city" name="user-type" value="3">
+            <label for="radio-city">תושב העיר</label> <br> <br>
+            <label for="ID"></label>העלאת תעודת זהות/ כרטיס סטודנט </label> <br> 
+            <input type="file" id="myFile" name="filename"><br> <br>
+
+            <input type="submit" value="הגש"> 
+        </form>
+        </div>
+        </div>
+        <br><br>
+    <div id="footer" dir="ltr"></div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class page</title>
+    <link rel="stylesheet" href="../public/CSS/main.css">
+    <link rel="stylesheet" href="../public/CSS/gridCSS.css">
+    <script src= "../app.js"></script>
+    <script src= "../public/js/java_script.js"></script>
+
+</head>
+<body dir="rtl" onload="loadPage()">
+    <header id="header"></header>
+    <nav id="nav"></nav>
+    <div class="class-grid-container">
+        <div class="class-head">
+            <h1 id="className">
+            </h1>
+        </div>
+        <div class="class-pic"> 
+            <img src="../public/img/pilates.jpg" alt="" style="width: 20vw;">
+        </div>
+        <div class="class-text" id="aa">
+            <input type="checkbox" >
+            <label>הוספה למועדפים</label> <br> <br>
+            <p>
+            השיעור במסגרת פוזיטיב פלוס, בבניין-
+            <span id="location"> 70 חדר 129</span> <br>
+            ניתן לשלם לפני תחילת האימון במזומן, באשראי בקופות הסטודיו הגדול.    <br>
+            בנוסף ניתן לשלם על כניסה חד פעמית, כרטיסיות ומנויים בתשלום מזומן או אשראי דרך האתר המאובטח באתר\אפליקציה. 
+        </p>
+        </div>
+        <div class="class-info">
+            <br>
+            <button id="readLink" onclick="openClassPage(1)"> 
+                קרא עוד..
+            </button>
+           
+            <p id="class_info"> 
+            </p>
+            <button id="close_info" onclick="closeInfo()" style="display:none;"> 
+                הסתר מידע
+            </button>
+        </div>
+        <form><br>
+            <label for="select">
+                רשימת השיעורים הקרובים:
+            </label> <br>
+                 <select name="date" id="date" onchange="dateSelect()">
+                 <option value="1"> 05/09/2021</option>
+                 
+                 </select>
+                 <br><br>
+                <input type="submit" value="הרשמה לשיעור">
+                <p>
+                    מקומות פנויים: 
+                    <span id="free"></span> <br>
+                    מספר רשומים:
+                    <span id="par"></span> <br>
+                    מספר ממתינים:
+                    <span id="wait"></span> <br>
+                </p>
+        </form>
+
+    </div>
+    <div id="footer" dir="ltr"></div>
+</body>
+</html>
