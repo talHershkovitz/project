@@ -1,0 +1,196 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/main.css">
+    <link rel="stylesheet" href="/CSS/gridCSS.css">
+    <link rel="stylesheet" href="/CSS/home-page.css.css">
+    <script src= "/js/java_script.js"></script>
+    <title>class schedule page</title>
+</head>
+<body dir ="rtl" onload="LoadTable()"; >
+    <header id="header"></header>
+    <nav id ="nav"></nav>
+        <div class="class-schedule-container">
+            <br><br><br><br>
+            
+        <div class="schedule-header">
+            <h1>לוח שיעורים</h1>
+        </div>
+        <div class="schedule-display-container">
+            <div>
+          
+                <h3> בחר שבוע:</h3> <br>            
+                <button class="btn_cls" onclick="ShowWeek1()">שבוע הנוכחי </button>
+                <button class="btn_cls" onclick="ShowWeek2()">שבוע 2 </button>
+                <button class="btn_cls" onclick="ShowWeek3()">שבוע 3 </button>
+                 
+            </div>
+
+        </div>
+              
+              <div class="schedule-container" id='schedule' >
+                <div class="week1" id="week1"> 
+
+                  <div class="week-days-container">
+                      <span class="corner"></span>
+                      <div class="week-day" >ראשון <p id='date-picker0'></p>
+                          
+                      </div>
+                   
+                      <div class="week-day">שני <p id='date-picker1'></p>  </div>
+                      <div class="week-day">שלישי <p id='date-picker2'></p></div>
+                      <div class="week-day">רביעי<p id='date-picker3'></p></div>
+                      <div class="week-day">חמישי<p id='date-picker4'></p></div>
+                      <div class="week-day">שישי<p id='date-picker5'></p></div>
+                      <div class="week-day">שבת<p id='date-picker6'></p></div>
+                  </div>
+                  <div class="part__day">
+                      <span class="morning">בוקר </span>
+                      <div class="lesson" id ='11'></div>
+                      <div class="lesson" id = 12></div>
+                      <div class="lesson" id = 13></div>
+                      <div class="lesson" id = 14></div>
+                      <div class="lesson" id = 15></div>
+                      <div class="lesson" id = 16></div>
+                      <div class="lesson" id = 17></div>
+                  </div>
+                  <div class="part__day">
+                      <span class="afternoon">צהריים</span>
+                      <div class="lesson" id = 21></div>
+                      <div class="lesson" id = 22></div>
+                      <div class="lesson" id = 23></div>
+                      <div class="lesson" id = 24></div>                   
+                      <div class="lesson" id = 25></div>
+                      <div class="lesson" id = 26></div>
+                      <div class="lesson" id = 27></div>
+                  </div>
+                  <div class="part__day">
+                      <span class="evening">ערב</span>
+                      <div class="lesson" id = 31></div>
+                      <div class="lesson" id = 32></div>
+                      <div class="lesson" id = 33></div>
+                      <div class="lesson" id = 34></div>
+                      <div class="lesson" id = 35></div>
+                      <div class="lesson" id = 36></div>
+                      <div class="lesson" id = 37></div>
+                  </div>
+            
+        </div>
+      
+
+        <div class="week2" id="week2" > 
+
+          <div class="week-days-container">
+              <span class="corner"></span>
+              <div class="week-day" >ראשון <p id='date-picker7'></p></div>
+              <div class="week-day">שני <p id='date-picker8'></p>  </div>
+              <div class="week-day">שלישי <p id='date-picker9'></p></div>
+              <div class="week-day">רביעי<p id='date-picker10'></p></div>
+              <div class="week-day">חמישי<p id='date-picker11'></p></div>
+              <div class="week-day">שישי<p id='date-picker12'></p></div>
+              <div class="week-day">שבת<p id='date-picker13'></p></div>
+          </div>
+          <div class="part__day">
+              <span class="morning">בוקר </span>
+              <div class="lesson" id ='b11'></div>
+              <div class="lesson" id = b12></div>
+              <div class="lesson" id = b13></div>
+              <div class="lesson" id = b14></div>
+              <div class="lesson" id = b15></div>
+              <div class="lesson" id = b16></div>
+              <div class="lesson" id = b17></div>
+          </div>
+          <div class="part__day">
+              <span class="afternoon">צהריים</span>
+              <div class="lesson" id = b21></div>
+              <div class="lesson" id = b22></div>
+              <div class="lesson" id = b23></div>
+              <div class="lesson" id = b24></div>                   
+              <div class="lesson" id = b25></div>
+              <div class="lesson" id = b26></div>
+              <div class="lesson" id = b27></div>
+          </div>
+          <div class="part__day">
+              <span class="evening">ערב</span>
+              <div class="lesson" id = b31></div>
+              <div class="lesson" id = b32></div>
+              <div class="lesson" id = b33></div>
+              <div class="lesson" id = b34></div>
+              <div class="lesson" id = b35></div>
+              <div class="lesson" id = b36></div>
+              <div class="lesson" id = b37></div>
+          </div>
+    
+   
+  </div>
+
+              
+        <div class="week3" id="week3" > 
+
+            <div class="week-days-container">
+                <span class="corner"></span>
+                <div class="week-day" >ראשון <p id='date-picker14'></p></div>
+                <div class="week-day">שני <p id='date-picker15'></p>  </div>
+                <div class="week-day">שלישי <p id='date-picker16'></p></div>
+                <div class="week-day">רביעי<p id='date-picker17'></p></div>
+                <div class="week-day">חמישי<p id='date-picker18'></p></div>
+                <div class="week-day">שישי<p id='date-picker19'></p></div>
+                <div class="week-day">שבת<p id='date-picker20'></p></div>
+            </div>
+            <div class="part__day">
+                <span class="morning">בוקר </span>
+                <div class="lesson" id ='c11'></div>
+                <div class="lesson" id = c12></div>
+                <div class="lesson" id = c13></div>
+                <div class="lesson" id = c14></div>
+                <div class="lesson" id = c15></div>
+                <div class="lesson" id = c16></div>
+                <div class="lesson" id = c17></div>
+            </div>
+            <div class="part__day">
+                <span class="afternoon">צהריים</span>
+                <div class="lesson" id = c21></div>
+                <div class="lesson" id = c22></div>
+                <div class="lesson" id = c23></div>
+                <div class="lesson" id = c24></div>                   
+                <div class="lesson" id = c25></div>
+                <div class="lesson" id = c26></div>
+                <div class="lesson" id = c27></div>
+            </div>
+            <div class="part__day">
+                <span class="evening">ערב</span>
+                <div class="lesson" id = c31></div>
+                <div class="lesson" id = c32></div>
+                <div class="lesson" id = c33></div>
+                <div class="lesson" id = c34></div>
+                <div class="lesson" id = c35></div>
+                <div class="lesson" id = c36></div>
+                <div class="lesson" id = c37></div>
+            </div>
+      
+ 
+    </div>
+    <div id="footer" dir="ltr"></div> 
+    <div class="popup" id=popup>     
+        <div class="overlay"></div>
+          <div class="popcontent">
+        <p>השיעור מלא !</p> <br><br><br>
+        <button class="btn_cls" onclick="togglePopup()">חזרה</button>         
+       </div> 
+   </div>
+
+   <div class="popup" id="details">
+     <div class="overlay"></div>
+        <div class= "popcontent" >
+           <div id="lesson-details">פרטי השיעור: </div> <br><br>
+           <button class="btn_cls" id='href1' >לחץ להרשמה </button> 
+           <button class="btn_cls" onclick="togglePopup()">חזרה</button>  
+               
+       </div>
+   </div>
+ </div>
+ </div>
+ <div id="footer" dir="ltr"></div>
+
+</body>
+</html>

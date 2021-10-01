@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class page</title>
+    <link rel="stylesheet" href="/CSS/main.css">
+    <link rel="stylesheet" href="/CSS/gridCSS.css">
+    <script src= "/js/java_script.js"></script>
+</head>
+
+<body onload="init_qa()" dir="rtl">
+    <header id="header"></header>
+    <div class="qa-grid-container">
+        <div class="qa-header">
+            <h1>שאלות נפוצות</h1>
+        </div>
+    </div>
+    <div class="q&a-group button">
+        <ul class="q&a">
+            <button id="ButtonPricing" onclick="questions_answers(q_and_a_pricing)">מחיר</button>
+            <button id="ButtonClasses" onclick="questions_answers(q_and_a_classes)">שיעורים</button>
+            <button id="ButtonContact" onclick="questions_answers(q_and_a_contact)">יצירת קשר</button>
+            <button id="ButtonHealthProblem" onclick="questions_answers(q_and_a_healthProblem)">בעיות בריאותיות</button>
+    </div>
+    <div id=qa_container>
+    </div>
+
+
+
+    <div id="footer"  dir="ltr"></div>
+
+</body>
+
+</html>

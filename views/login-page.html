@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class page</title>
+    <link rel="stylesheet" href="/CSS/main.css">
+    <link rel="stylesheet" href="/CSS/gridCSS.css">
+    <script src= "/js/java_script.js"></script>
+
+
+</head>
+<body dir="rtl" onload="loadPage()">
+    <header id="header"></header>
+    <nav id="nav"></nav>
+
+<h3> התחברות משתמש קיים:</h3>
+        
+<div class= "login-popcontent" >
+    <form method="POST" action="http://localhost:8080/newReq" name="login-form" onsubmit="">
+    <lable> אנא הכנס פרטי התחברות:</lable>
+    <label for="log-email"> אימייל :</label>
+    <input type="text" id="log-email"> <br>
+    <label for="log-pass">סיסמא :</label>
+    <input type="password" id="log-pass"> <br>
+    <input type="submit" style="font-family:'text'" value="התחבר">
+
+</form>
+</div>
+<br><br>
+<button >  <a href="http://localhost:8080/registration"> יצירת משתמש חדש </a></button>
+           
+   <div id="footer" dir="ltr"></div>
+</body>
+</html>
