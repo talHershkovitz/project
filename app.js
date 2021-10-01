@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true
 
 // load view engine
 app.use(express.static('public'));
-app.use('/static', express.static(path.join(__dirname, 'public')))
+app.use('/public', express.static(path.join(__dirname, 'public')))
 
 
 // listen
