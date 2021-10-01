@@ -74,21 +74,6 @@ app.get("/qa", function(req, res){
 });
 
 
-function openClassPage(class_num){
-    sql.query(`SELECT * FROM classes where id = ${class_num}` , (err, mySQLrespons) => {
-        if (err) {
-        console.log("error: ", err);
-        res.status(400).send({message: "error in getting class record: " + err});
-        return;
-        }
-        document.getElementById("className").innerHTML = mySQLrespons[0]["name"];
-        document.getElementById("location").innerHTML = (mySQLrespons[0]["building"])+" , חדר "+mySQLrespons[0]["class"];
-        document.getElementById("class-info").innerHTML = mySQLrespons[0]["description"];
-        res.sendFile(path.join(__dirname, '/views/class.html'));
-        return;
-        });
-}
-
 // load class page
 app.get("/class-page", function(req, res){
     sql.query("SELECT * FROM classes where id=2", (err, mySQLrespons) => {
