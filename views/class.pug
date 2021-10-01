@@ -1,0 +1,58 @@
+doctype html
+head
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title class page
+  link(rel='stylesheet' href='../public/CSS/main.css')
+  link(rel='stylesheet' href='../public/CSS/gridCSS.css')
+  script(src='../app.js')
+  script(src='../public/js/java_script.js')
+body(dir="rtl" onload="loadPage()")
+    header#header
+    nav#nav
+    .class-grid-container
+        .class-head
+            h1#className 
+                |#{title}
+        .class-pic
+            img(src=`../public/img/${image}.jpg` alt='' style='width: 20vw;')
+        #aa.class-text
+            //- input(type='checkbox')
+            //- label הוספה למועדפים
+            br
+            br
+            p
+                |  השיעור במסגרת פוזיטיב פלוס, בבניין-
+                span#location  #{roomNum} חדר #{building}
+                br
+                |  ניתן לשלם לפני תחילת האימון במזומן, באשראי בקופות הסטודיו הגדול.        
+                br
+                |  ניתן לשלם על כניסה חד פעמית, כרטיסיות ומנויים בתשלום מזומן או אשראי דרך האתר המאובטח באתר\אפליקציה
+        .class-info
+            br
+            button#readLink(onclick='readMore()')
+                |   קרא עוד..
+            p#class_info     
+                |#{description}
+            button#close_info(onclick='closeInfo()' style='display:none;')
+                |   הסתר מידע
+        //- form
+        //-     br
+        //-     label(for='select')
+        //-         | רשימת השיעורים הקרובים:
+        //-     br
+        //-     select#date(name='date' onchange='dateSelect()')
+        //-     option(value='1')  05/09/2021
+        //-     br
+        //-     br
+        //-     input(type='submit' value='הרשמה לשיעור')
+        //-     p
+        //-         | מקומות פנויים: 
+        //-         span#free
+        //-         br
+        //-         | מספר רשומים:
+        //-         span#par
+        //-         br
+        //-         | מספר ממתינים:
+        //-         span#wait
+        //-         br
+    #footer(dir='ltr')
