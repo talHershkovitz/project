@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const sql = require("./DB/db.js")
-const mysql = require("mysql");
 const bodyParser = require("body-parser");
 const path = require ('path');
 const { resourceLimits } = require('worker_threads');
@@ -18,6 +17,8 @@ app.use(bodyParser.urlencoded({ extended: true
 app.use(express.static('public'));
 app.use('/public', express.static(path.join(__dirname, 'public')))
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
 // listen
 app.listen(port, () => {
@@ -106,9 +107,33 @@ app.get("/class-page", function(req, res){
         });
  });
 
- app.get("/class", function(req, res){
-     openClassPage(1);
+ app.get("/class/:id", function(req, res){
+  //   openClassPage(1);
+  sql.query(`SELECT * FROM positive_db.classes where id = ${req.params.id}`, (err, mySQLrespons) => {
+    if (err) {
+    console.log("db error: ", err);
+    res.status(400).send({message: "error in getting all records: " + err});
+    return;
+    }
+  
+    var image= mySQLrespons[0]["img"];
+    var title= mySQLrespons[0]["title"];
+    var building= mySQLrespons[0]["building"];
+    var description= mySQLrespons[0]["description"];
+    var roomNum= mySQLrespons[0]["room number"];
+    
+    res.render('class',{
+        image,
+        title,
+        building,
+        description,
+        roomNum
     });
+    return;
+    });
+
+});
+   
 app.get("/about-us", function(req, res){
     res.sendFile(path.join(__dirname, '/views/about-us.html'));
     });
