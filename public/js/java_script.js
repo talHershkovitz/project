@@ -183,15 +183,15 @@ function ShowWeek1() {         /* show week buttons*/
 
   }
         /Lessons Objects/
-              const Yoga = new Lesson('יוגה','פלוס','11:00','9:00','משה נחמן','../HTML/class.html',12, 30,'#00ced1')    
-              const Yoga2 = new Lesson('יוגה','פלוס','15:00','13:30','משה נחמן','../HTML/class.html',2, 15,'#00ced1')    
-              const Hiit = new Lesson('היט','רגיל','17:00','16:00','אילן נחמן', '../HTML/class.html',24, 24,'	#FF00FF')
-              const Hiit2 = new Lesson('היט','רגיל','14:00','13:00','אילן נחמן', '../HTML/class.html',22, 24,'	#FF00FF')
-              const Spinning = new Lesson('ספינינג','רגיל','15:00','13:00','אייל גולן', '../HTML/class.html',20, 24,'#ff8c00')
-              const Spinning2 = new Lesson('ספינינג','רגיל','15:00','13:00','אייל גולן', '../HTML/class.html',20, 24,'#ff8c00')
-              const Pilates = new Lesson('פילאטיס','רגיל','11:00','9:00','יונתן סרן', '../HTML/class.html',18, 18,'#008000')
-              const Kickbox = new Lesson('קיקבוקס','רגיל','20:00','19:00','אקסל רוז', '../HTML/class.html',5, 25,'#bdb76b')
-              const Kickbox2 = new Lesson('קיקבוקס','רגיל','20:00','18:30','אקסל רוז', '../HTML/class.html',5, 25,'#bdb76b')
+              const Yoga = new Lesson('יוגה','פלוס','11:00','9:00','משה נחמן','http://localhost:8080/class/1',12, 30,'#00ced1')    
+              const Yoga2 = new Lesson('יוגה','פלוס','15:00','13:30','משה נחמן','http://localhost:8080/class/1',2, 15,'#00ced1')    
+              const Hiit = new Lesson('היט','רגיל','17:00','16:00','אילן נחמן', 'http://localhost:8080/class/2',24, 24,'	#FF00FF')
+              const Hiit2 = new Lesson('היט','רגיל','14:00','13:00','אילן נחמן', 'http://localhost:8080/class/2',22, 24,'	#FF00FF')
+              const Spinning = new Lesson('ספינינג','רגיל','15:00','13:00','אייל גולן', 'http://localhost:8080/class/1',20, 24,'#ff8c00')
+              const Spinning2 = new Lesson('ספינינג','רגיל','15:00','13:00','אייל גולן', 'http://localhost:8080/class/1',20, 24,'#ff8c00')
+              const Pilates = new Lesson('פילאטיס','רגיל','11:00','9:00','יונתן סרן', 'http://localhost:8080/class/2',18, 18,'#008000')
+              const Kickbox = new Lesson('קיקבוקס','רגיל','20:00','19:00','אקסל רוז', 'http://localhost:8080/class/2',5, 25,'#bdb76b')
+              const Kickbox2 = new Lesson('קיקבוקס','רגיל','20:00','18:30','אקסל רוז', 'http://localhost:8080/class/1',5, 25,'#bdb76b')
 
               function Lesson(name,studiotype,startHr,endHr,instructor,href,amountSigned,max,color) {
                 this.name =name;
