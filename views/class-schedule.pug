@@ -1,0 +1,95 @@
+head
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='../public/CSS/main.css')
+    link(rel='stylesheet' href='../public/CSS/gridCSS.css')
+    link(rel='stylesheet' href='../public/CSS/home-page.css.css')
+    script(src='../public/js/java_script.js')
+    title 
+        |class schedule page
+header#header
+body(dir="rtl" onload="LoadTable()")
+    nav#nav
+    .class-schedule-container
+        br
+        br
+        br
+        br
+        .schedule-header
+            h1 לוח שיעורים
+        .schedule-display-container
+            div
+                h3  בחר שבוע:
+                br
+                button.btn_cls(onclick='ShowWeek1()') &#x5E9;&#x5D1;&#x5D5;&#x5E2; &#x5D4;&#x5E0;&#x5D5;&#x5DB;&#x5D7;&#x5D9; 
+                button.btn_cls(onclick='ShowWeek2()') &#x5E9;&#x5D1;&#x5D5;&#x5E2; 2 
+                button.btn_cls(onclick='ShowWeek3()') &#x5E9;&#x5D1;&#x5D5;&#x5E2; 3 
+        #schedule.schedule-container
+            #week1.week1
+                .week-days-container
+                    span.corner
+                    .week-day
+                        | ראשון 
+                        p#date-picker0
+                    .week-day
+                        | שני 
+                        p#date-picker1
+                    .week-day
+                        | שלישי 
+                        p#date-picker2
+                    .week-day
+                        | רביעי
+                        p#date-picker3
+                    .week-day
+                        | חמישי
+                        p#date-picker4
+                    .week-day
+                        | שישי
+                        p#date-picker5
+                    .week-day
+                        | שבת
+                        p#date-picker6
+                .part__day
+                    span.morning בוקר
+                    #11.lesson
+                    #12.lesson
+                    #13.lesson
+                    #14.lesson
+                    #15.lesson
+                    #16.lesson
+                    #17.lesson
+                .part__day
+                    span.afternoon צהריים
+                    #21.lesson
+                    #22.lesson
+                    #23.lesson
+                    #24.lesson
+                    #25.lesson
+                    #26.lesson
+                    #27.lesson
+                .part__day
+                    span.evening ערב
+                    #31.lesson
+                    #32.lesson
+                    #33.lesson
+                    #34.lesson
+                    #35.lesson
+                    #36.lesson
+                    #37.lesson
+            #footer(dir='ltr')
+            #popup.popup
+                .overlay
+                .popcontent
+                    p השיעור מלא!
+                    br
+                    br
+                    br
+                    button.btn_cls(onclick='togglePopup()') חזרה
+            #details.popup
+                .overlay
+                .popcontent
+                    #lesson-details |פרטי השיעור : 
+                    br
+                    br
+                    button#href1.btn_cls לחץ להרשמה 
+                    button.btn_cls(onclick='togglePopup()') חזרה
+#footer(dir='ltr')

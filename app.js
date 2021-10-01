@@ -73,7 +73,6 @@ app.get("/qa", function(req, res){
     res.send("hhh");
 });
 
-
 // load class page
 app.get("/class-page", function(req, res){
     sql.query("SELECT * FROM classes where id=2", (err, mySQLrespons) => {
@@ -123,7 +122,32 @@ app.get("/about-us", function(req, res){
     res.sendFile(path.join(__dirname, '/views/about-us.html'));
     });
 app.get("/class-schedule", function(req, res){
-    res.sendFile(path.join(__dirname, '/views/class-schedule.html'));
+
+    sql.query(`SELECT * FROM positive_db.class_schedule Where start_time between'2021-09-05 8:00:00' and '2021-09-11 23:59:00'`, (err, mySQLrespons) => {
+        if (err) {
+        console.log("db error: ", err);
+        res.status(400).send({message: "error in getting all records: " + err});
+        return;
+        }
+      
+        var instructor= mySQLrespons[0]["instructor"];
+        var endTime= mySQLrespons[0]["end time"];
+        var startTime= mySQLrespons[0]["start time"];
+        var participants= mySQLrespons[0]["participants"];
+        
+        console.log(mySQLrespons)
+        res.render('class-schedule',{  
+
+            instructor,
+            endTime,
+            startTime,
+            participants,
+        
+        });
+        return;
+        });
+    
+    //res.sendFile(path.join(__dirname, '/views/class-schedule.html'));
     });
 app.get("/home-page", function(req, res){
     res.sendFile(path.join(__dirname, '/views/home-page.html'));
